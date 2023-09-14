@@ -15,9 +15,9 @@ vector<int> solution(int numer1, int denom1, int numer2, int denom2) {
     int denom = denom1 * denom2; // denom:분모
     
     for(int i=2; i<min(denom, numer); i++){ // 최대공약수 구하기
-        if(denom%i==0 && numer%i==0){
+        while(denom%i==0 && numer%i==0){
             denom=denom/i;
-            numer=numer/i;
+            numer=numer/i;            
         }
     }
     
